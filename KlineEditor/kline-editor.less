@@ -1,0 +1,38 @@
+.kline-editor-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  .kline-canvas-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(~"100% - 50px");
+    height: calc(~"100% - 20px");
+    .kline-canvas{
+      width: 100%;
+      height: 100%;
+      // outline: 1px solid green;
+      outline: none;
+    }
+  }
+
+  .right-axis-y-wrapper {
+    cursor: ns-resize;
+    position: absolute;
+    right: 0;
+    height: calc(~"100% - 20px");
+    width: 50px;
+  }
+
+  .bottom-axis-x-wrapper {
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: calc(~"100% - 50px");
+    cursor: ew-resize;
+    &.silent {
+      cursor: default;
+    }
+  }
+
+}
