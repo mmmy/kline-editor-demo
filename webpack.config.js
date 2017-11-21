@@ -1,7 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 const fs = require('fs')
-
+if (!fs.existsSync('dist')){
+    fs.mkdirSync('dist');
+}
 fs.createReadStream('index.html').pipe(fs.createWriteStream('dist/index.html'));
 
 module.exports = {
