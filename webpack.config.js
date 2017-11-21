@@ -1,5 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
+const fs = require('fs')
+
+fs.copyFileSync('./index.html', 'dist/index.html')
 
 module.exports = {
   devtool: '#cheap-module-eval-source-map',
